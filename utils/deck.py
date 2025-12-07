@@ -1,4 +1,4 @@
-def create_player(name: str = "AI") -> dict:
+לאdef create_player(name: str = "AI") -> dict:
     player = {
         'name': name,
         'hand': [],
@@ -148,4 +148,25 @@ export function play_round(player_1: any, player_2: any): void {
     } else {
         console.log(`Tie: ${card1} vs ${card2}`);
     }
+    
+    
 }
+
+
+
+
+
+
+
+import { init_game, play_round } from "./deck";
+
+const game = init_game();
+const [p1, p2] = game.players;
+
+while (p1.hand.length > 0 && p2.hand.length > 0) {
+    play_round(p1, p2);
+}
+
+console.log("Final Score:");
+console.log(p1.name, p1.score);
+console.log(p2.name, p2.score);
