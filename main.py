@@ -7,5 +7,14 @@ if __name__ == "__main__":
     
     
     
+    
+    
+    
+    
 
 
+if (unit.player === 'human') {
+    text = unit.rank;
+} else {
+    text = "X"; // או "" אם אתה רוצה שלא יראו כלום
+}
