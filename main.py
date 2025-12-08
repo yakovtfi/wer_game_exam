@@ -13,8 +13,16 @@ if __name__ == "__main__":
     
 
 
-if (unit.player === 'human') {
-    text = unit.rank;
-} else {
-    text = "X"; // או "" אם אתה רוצה שלא יראו כלום
+if(unit){ 
+    cls = unit.player;
+    
+    // אם זה הדגל, עדיין תצבע בזהב
+    if(unit.rank === 'flag') cls += ' flag';
+
+    // מציגים רק את החיילים של האדם
+    if(unit.player === 'human') {
+        text = unit.rank;
+    } else {
+        text = ''; // המחשב – מוסתר
+    }
 }
